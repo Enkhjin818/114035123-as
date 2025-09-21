@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resume — Alex Morgan</title>
+  <style>
+    /* Minimal, modern one-page resume (print-friendly) */
+    :root{
+      --accent:#4f46e5; /* indigo-600 */
+      --muted:#6b7280;
+      --paper:#ffffff;
+      --bg:#f8fafc;
+      --radius:12px;
+      --max-width:900px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:#0f172a;
+    }
+    html,body{height:100%;background:var(--bg);margin:0;padding:30px 16px;}
+    .card{
+      max-width:var(--max-width);margin:0 auto;background:var(--paper);border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,23,0.08);overflow:hidden;
+      display:grid;grid-template-columns:2fr 1fr;gap:28px;padding:28px;
+    }
+    header{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+    .who{line-height:1}
+    .name{font-size:28px;font-weight:700;margin:0}
+    .title{color:var(--accent);font-weight:600;margin-top:6px}
+    .summary{margin-top:12px;color:var(--muted);max-width:56ch}
+
+    /* left column */
+    .main{padding-right:6px}
+    h2{font-size:14px;margin:0 0 10px 0;color:#0f172a}
+    .section{margin-bottom:18px}
+    .job{margin-bottom:12px}
+    .job .meta{display:flex;justify-content:space-between;align-items:center}
+    .job .role{font-weight:600}
+    .job .company{color:var(--muted);font-size:13px}
+    .job ul{margin:8px 0 0 18px;color:#111827}
+
+    /* right column */
+    .aside{padding-left:6px;border-left:1px dashed rgba(15,23,42,0.04)}
+    .chip{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(15,23,42,0.06);font-size:13px;margin:4px 6px 0 0}
+    .muted{color:var(--muted);font-size:13px}
+
+    /* contact */
+    .contact{display:flex;flex-direction:column;gap:6px;text-align:right}
+    .contact a{color:inherit;text-decoration:none}
+
+    /* print */
+    @media print{
+      html,body{background:white;padding:0}
+      .card{box-shadow:none;border-radius:0;grid-template-columns:2fr 1fr;padding:18px}
+      .aside{border-left:1px solid rgba(0,0,0,0.05)}
+      .no-print{display:none}
+    }
+
+    /* responsive */
+    @media (max-width:800px){
+      .card{grid-template-columns:1fr;padding:18px}
+      .contact{text-align:left}
+      .aside{border-left:none;border-top:1px dashed rgba(15,23,42,0.04);padding-top:16px;margin-top:6px}
+    }
+
+    /* small utilities */
+    .small{font-size:13px;color:var(--muted)}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-weight:600}
+  </style>
+</head>
+<body>
+  <div class="card" role="main">
+    <div class="main">
+      <header>
+        <div class="who">
+          <h1 class="name">Alex Morgan</h1>
+          <div class="title">Product Designer</div>
+          <p class="summary">Product designer with 6+ years building delightful user experiences for web and mobile. Specializes in user research, interaction design, and high-fidelity prototyping. I turn complex problems into simple experiences.</p>
+        </div>
+        <div class="contact small">
+          <div>alex.morgan@example.com</div>
+          <div>+1 (555) 123-4567</div>
+          <div><a href="#" target="_blank">alexmorgan.design</a></div>
+          <div class="muted">Taipei, Taiwan</div>
+        </div>
+      </header>
+
+      <section class="section">
+        <h2>Experience</h2>
+
+        <article class="job">
+          <div class="meta">
+            <div>
+              <div class="role">Senior Product Designer</div>
+              <div class="company">BrightApps Inc.</div>
+            </div>
+            <div class="small muted">Jan 2021 — Present</div>
+          </div>
+          <ul>
+            <li>Led design for a cross-platform analytics product used by 50k+ users.</li>
+            <li>Improved onboarding conversion by 32% through redesigned flows and microcopy.</li>
+            <li>Established a design-review process and mentored junior designers.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="meta">
+            <div>
+              <div class="role">Product Designer</div>
+              <div class="company">Nova Labs</div>
+            </div>
+            <div class="small muted">Aug 2018 — Dec 2020</div>
+          </div>
+          <ul>
+            <li>Designed responsive dashboards and components for an internal design system.</li>
+            <li>Ran user interviews and turned insights into prioritized product improvements.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Projects</h2>
+        <div>
+          <strong>Orbit Analytics</strong>
+          <div class="small muted">A lightweight analytics dashboard for small teams — designed core flows and components.</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Education</h2>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:start">
+            <div>
+              <strong>B.A. in Graphic Design</strong>
+              <div class="small muted">University of Creative Arts</div>
+            </div>
+            <div class="small muted">2014 — 2018</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="aside">
+      <section class="section">
+        <h2>Skills</h2>
+        <div>
+          <span class="chip">Figma</span>
+          <span class="chip">Prototyping</span>
+          <span class="chip">Design Systems</span>
+          <span class="chip">User Research</span>
+          <span class="chip">HTML / CSS</span>
+          <span class="chip">Accessibility</span>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Quick Info</h2>
+        <div class="small muted">Availability: 2 weeks notice</div>
+        <div class="small muted">Languages: English, Chinese</div>
+        <div style="margin-top:10px">
+          <a class="btn no-print" href="#" onclick="window.print();return false;">Print / Save as PDF</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Contact</h2>
+        <div class="small">LinkedIn: <a href="#">/alexmorgan</a></div>
+        <div class="small" style="margin-top:6px">Portfolio: <a href="#">alexmorgan.design</a></div>
+      </section>
+
+      <footer class="small muted" style="margin-top:18px">Generated — single-file HTML resume. Replace text with your details and save as <code>index.html</code>.</footer>
+    </aside>
+  </div>
+</body>
+</html>
