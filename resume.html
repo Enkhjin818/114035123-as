@@ -21,7 +21,7 @@
       max-width:var(--max-width);margin:0 auto;background:var(--paper);border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,23,0.08);overflow:hidden;
       display:grid;grid-template-columns:2fr 1fr;gap:28px;padding:28px;
     }
-    header{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px}
     .who{line-height:1}
     .name{font-size:28px;font-weight:700;margin:0}
     .title{color:var(--accent);font-weight:600;margin-top:6px}
@@ -69,13 +69,23 @@
 <body>
   <div class="card" role="main">
     <div class="main">
-      <header>
-        <img src="tseej_zurag.jpg" alt="Profile Photo" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin-right:20px;">
-        <div class="who">
-          <h1 class="name">Enkhjin Narankhuu</h1>
-          <div class="title">Product Designer</div>
-          <p class="summary">Product designer with 6+ years building delightful user experiences for web and mobile. Specializes in user research, interaction design, and high-fidelity prototyping. I turn complex problems into simple experiences.</p>
+
+      <!-- Fixed header layout -->
+      <header style="display:flex;align-items:center;justify-content:space-between;gap:20px;">
+        <div style="display:flex;align-items:center;gap:20px;">
+          <img src="tseej_zurag.jpg" alt="Profile Photo"
+               style="width:120px;height:120px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+          <div class="who">
+            <h1 class="name">Enkhjin Narankhuu</h1>
+            <div class="title">Product Designer</div>
+            <p class="summary">
+              Product designer with 6+ years building delightful user experiences for web and mobile.
+              Specializes in user research, interaction design, and high-fidelity prototyping.
+              I turn complex problems into simple experiences.
+            </p>
+          </div>
         </div>
+
         <div class="contact small">
           <div>enkhjin.narankhuu@example.com</div>
           <div>+1 (555) 123-4567</div>
@@ -121,7 +131,9 @@
         <h2>Projects</h2>
         <div>
           <strong>Orbit Analytics</strong>
-          <div class="small muted">A lightweight analytics dashboard for small teams — designed core flows and components.</div>
+          <div class="small muted">
+            A lightweight analytics dashboard for small teams — designed core flows and components.
+          </div>
         </div>
       </section>
 
